@@ -5,8 +5,6 @@
 
 const { createApp } = Vue;
 
-
-
 createApp({
   data() {
     return {
@@ -18,7 +16,7 @@ createApp({
   },
   methods: {
     generateEmail(){
-        // ciclare per 10 volte listEmail
+        // ciclare per 10 volte listEmail 
         // in modo da avere 10 mail
         for(let i = 0; i <= 9; i++){
             // usare l'API per creare le Email 
@@ -26,7 +24,6 @@ createApp({
             .then((response) => {
                 const serverData = response.data;
                 this.myEmail = serverData.response;
-            
                 // pusharle nel'array da stampare
                 this.listEmail.push(this.myEmail)
                 console.log(this.listEmail);
